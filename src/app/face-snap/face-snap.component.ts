@@ -11,6 +11,9 @@ export class FaceSnapComponent implements OnInit {
   description!: string;
   createdDate!: Date;
   snaps!: number;
+  snapped!: boolean;
+  imageUrl!: string;
+  buttonText!: string;
 
   constructor() { }
 
@@ -19,6 +22,19 @@ export class FaceSnapComponent implements OnInit {
     this.description = "A description that describes";
     this.createdDate = new Date();
     this.snaps = 6;
+    this.snapped = false;
+    this.imageUrl = "https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg";
+    this.buttonText = "Oh snap !";
   }
 
+  onSnap(){
+    if(!this.snapped){
+      this.buttonText = "Oops, un-snap !";
+      this.snaps++;
+    } else {
+      this.buttonText = "Oh snap !";
+      this.snaps--;
+    }
+    this.snapped = !this.snapped;
+  }
 }
