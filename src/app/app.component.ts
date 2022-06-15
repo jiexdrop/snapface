@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
       take(3),
       map(value => getValString(value)),
       tap(value => console.log(value)),
-      mergeMap(message => processMessage$(message))
+      switchMap(message => processMessage$(message))
     ).subscribe();
 
     function processMessage$(message: string) {
