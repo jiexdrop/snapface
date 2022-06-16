@@ -37,9 +37,4 @@ import { CoreModule } from './core/core.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor() {
-    registerLocaleData(fr.default);
-  }
-
-}
+export class AppModule { }
