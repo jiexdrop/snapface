@@ -7,7 +7,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 import { FaceSnapsModule } from './face-snaps/face-snaps.module';
-import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LandingPageModule } from './landing-page/landing-page.module';
 
 @NgModule({
